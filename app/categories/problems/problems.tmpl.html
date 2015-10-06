@@ -1,0 +1,6 @@
+<h2>Problems for category {{problemsCtrl.category.title}}</h2>
+<ul>
+	<li ng-repeat="problem in problemsCtrl.problems">
+		<a class="btn" ng-click="problemsCtrl.selectProblem(problem.id)">{{problem.title}}</a>
+	</li>
+</ul>

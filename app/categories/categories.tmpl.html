@@ -1,0 +1,6 @@
+<h2>Category</h2>
+<ul>
+	<li ng-repeat="(key, value) in categoriesCtrl.categories">
+		<a class="btn" ng-click="categoriesCtrl.selectCategory(key)"> {{value.title}} </a>
+	</li>
+</ul>

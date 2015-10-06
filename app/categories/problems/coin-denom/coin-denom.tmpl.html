@@ -1,0 +1,41 @@
+<h2>Coin Denomination Problem</h2>
+<div class="container-fluid">
+	<div class="row">
+		<h3>Execution</h3>
+
+		<form id="coin-denom-form">
+			<label for="total-value"> Total Value </label>
+			<input id="total-value" type="number" ng-model="coinDenomCtrl.totalValue"/> <br/>
+			<label> List of denominations</label>
+			<ul>
+				<li ng-repeat="(key, value) in coinDenomCtrl.denominations">
+					<input disabled value="{{key}}" readonly> <a class="btn"
+					                                             ng-click="coinDenomCtrl.removeDenomination(key)">x</a>
+				</li>
+			</ul>
+			<label for="add-denomination"> Add Denomination </label>
+			<input id="add-denomination" type="number" ng-model="coinDenomCtrl.denomination">
+			<a class="btn" ng-click="coinDenomCtrl.addDenomination(coinDenomCtrl.denomination)">Add </a>
+			<label for="min-number-of-deniminations"> Minumm number of denominations</label>
+			<input id="min-number-of-deniminations" disabled value="{{coinDenomCtrl.min}}">
+			<a class="btn" ng-click="coinDenomCtrl.calculate()">Calculate </a>
+
+		</form>
+
+	</div>
+
+	<div class="row">
+		<div class="col-md-6">
+			<h3>Implementation</h3>
+
+			<div hljs include="'app/coin-denom.js'"></div>
+		</div>
+		<div class="col-md-6">
+			<h3>Description</h3>
+		</div>
+
+
+	</div>
+
+
+</div>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="problem">
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>Problem Solving</title>
+
+</head>
+<body ng-controller="MainCtrl">
+
+<div class="container-fluid">
+	<div ui-view="categories"></div>
+	<div ui-view="problems"></div>
+	<div ui-view="coin-denom"></div>
+	<a ng-click="back()"  class="btn" ng-show="previousState">Back</a>
+	<a ng-click="forward()" class="btn" ng-show="nextState">Forward</a>
+</div>
+
+<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-strap/dist/angular-strap.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/lodash/lodash.js"></script>
+<script src="bower_components/highlightjs/highlight.pack.js"></script>
+<link rel="stylesheet" type="text/css"  href="bower_components/highlightjs/styles/default.css">
+<script src="bower_components/angular-highlightjs/src/angular-highlightjs.js"></script>
+<script src="app/common/categories-model.js"></script>
+<script src="app/common/problems-model.js"></script>
+<script src="app/categories/categories.js"></script>
+<script src="app/categories/problems/problems.js"></script>
+<script src="app/categories/problems/coin-denom/coin-denom.js"></script>
+<script src="app/common/directives/code-highlight.js"></script>
+<script src="app/app.js"></script>
+<script data-main="app/main.js" src="bower_components/requirejs/require.js"></script>
+
+</body>
+</html>
