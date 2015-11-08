@@ -2,7 +2,7 @@
     angular.module('problems',['model.problems', 'model.categories', 'coin-denom',  'code-highlight'])
         .config(function($stateProvider) {
             $stateProvider.state('problems', {
-                url: 'category/:category/problems',
+                url: '/category/:category/problems',
                 views: {
                     'problems@' :  {
                         templateUrl: 'app/categories/problems/problems.tmpl.html',
